@@ -13,7 +13,9 @@ def print_first_directors_movie_titles()
   count=0
   nds.map do |n|
     if n[:name]="Stephen Spielberg" and count<1
-      puts n[:movies]
+      n[:movies].map do |array|
+        puts array[:title]
+      end
       count+=1
     end
     #if n[:name]="Stephen Spielberg"
