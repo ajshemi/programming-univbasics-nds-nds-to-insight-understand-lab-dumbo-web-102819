@@ -10,9 +10,11 @@ end
 
 def print_first_directors_movie_titles()
   nds=directors_database()
+  count=0
   nds.map do |n|
-    if n[:name]="Stephen Spielberg"
-      puts n[:movies][0]
+    if n[:name]="Stephen Spielberg" and count<1
+      puts n[:movies]
+      count+=1
     end
     #if n[:name]="Stephen Spielberg"
       #n[:movies].map do |array|
